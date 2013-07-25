@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.spykit.runtime.feature"
+      label="Runtime Spykit"
+      version="2.0.0.qualifier"
+      provider-name="ANCIT Consulting">
+
+   <description url="http://www.ancitconsulting.com/tiki-index.php?page=eclipse-spykit">
+      Almost every day we hear of new companies adopting Eclipse as
+their application development platform of choice. With the number
+of Eclipse Projects growing in leaps and bounds in the Eclipse
+Community chances of the risk of memory bloat and performance
+degradation is high.
+Therefore Performance Tuning is the need of the hour in the Eclipse
+Projects.
+This Project is inspired by Runtime Spy, one of Core Tools available
+from Eclipse.org. During our search for Runtime Spy, we realised
+that the support for this tool has been stopped since Eclipse
+3.2 when Eclipse was moved to OSGI.
+Our motive of this project is to revive Runtime Spy back and
+add more functionality into the same and also create a set of
+tools that would come in handy for Performance Tuning of Eclipse
+Projects.
+We invite the Eclipse Community to start using the project for
+their performance tuning activities. Do please log in issues
+and new features that you would be interested in. We would be
+more than happy to implement it and provide a release immediately.
+The Project is hosted on Google Code and you may download the
+latest version from eclipse-spykit.
+The Source Code is also available for download thru SVN, we would
+encourage the contributors to take the source and build around
+it and contribute back to the project.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <url>
+      <update label="Eclipse Spykit" url="https://code.google.com/a/eclipselabs.org/p/eclipse-spykit/downloads/list"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.forms" version="3.5.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swt" version="3.6.2" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.spykit.runtime"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.spykit.runtime.snapshot"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.spykit.utils"
+         download-size="0"
+         install-size="0"
+         version="1.0.0"/>
+
+   <plugin
+         id="org.eclipse.spykit.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
+</feature>

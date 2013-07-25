@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.eclipse.spykit.ui.perspectives.EclipseSpykitPerspective"
+            id="org.eclipse.spykit.ui.perspectives.EclipseSpykitPerspective"
+            name="Spykit Startup Analysis">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.spykit.runtime.spykitcategory"
+            class="org.eclipse.spykit.ui.views.StartupSummaryView"
+            id="org.eclipse.spykit.ui.views.StartupSummaryView"
+            name="Startup Summary"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.spykit.runtime.spykitcategory"
+            class="org.eclipse.spykit.ui.views.StartupTypeView"
+            id="org.eclipse.spykit.ui.views.StartupTypeView"
+            name="Startup Type View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.spykit.runtime.spykitcategory"
+            class="org.eclipse.spykit.ui.views.PluginLoadedByView"
+            id="org.eclipse.spykit.ui.views.PluginLoadedByView"
+            name="Plugin Loaded By"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.spykit.ui.actionSet"
+            label="Spykit ActionSet"
+            visible="true">
+         <menu
+               id="sampleMenu"
+               label="Sample &amp;Menu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               class="org.eclipse.spykit.ui.actions.OpenSpykitPerspectiveAction"
+               icon="icons/activePluginsView.gif"
+               id="org.eclipse.spykit.ui.actions.OpenSpykitPerspectiveAction"
+               label="&amp;Open Spykit Perspective"
+               toolbarPath="sampleGroup"
+               tooltip="Open Spykit Perspective">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.spykit.runtime.spykitcategory"
+            class="org.eclipse.spykit.runtime.views.ActivePluginsView"
+            icon="icons/activePluginsView.gif"
+            id="org.eclipse.spykit.runtime.views.ActivePluginsView"
+            name="Active Plugins View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.spykit.runtime.spykitcategory"
+            class="org.eclipse.spykit.runtime.views.LoadedClassesView"
+            icon="icons/loadedClassesView.gif"
+            id="org.eclipse.spykit.runtime.views.LoadedClassesView"
+            name="Loaded Classes View"
+            restorable="true">
+      </view>
+      <category
+            id="org.eclipse.spykit.runtime.spykitcategory"
+            name="Eclipse Spy Kit">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="org.eclipse.runtimespy.activePluginsView.contribution"
+            targetID="org.eclipse.spykit.runtime.views.ActivePluginsView">
+         <action
+               class="org.eclipse.spykit.runtime.views.actions.RefreshActivePluginsViewAction"
+               icon="icons/refresh.gif"
+               id="org.eclipse.spykit.runtime.views.LoadedClassesView"
+               label="Refresh"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Update to the current state i.e checks if any plugins are activated from the last refresh">
+         </action>
+         <action
+               class="org.eclipse.spykit.runtime.views.actions.ExportActivePluginsViewAction"
+               icon="icons/export_report.gif"
+               id="org.eclipse.spykit.runtime.views.actions.ExportActivePluginsViewAction"
+               label="Export"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Export the data in the view">
+         </action>
+         <action
+               class="org.eclipse.spykit.runtime.views.actions.FlatActivePluginsViewAction"
+               icon="icons/flat.gif"
+               id="org.eclipse.spykit.runtime.views.actions.ExportActivePluginsViewAction"
+               label="Flat"
+               style="toggle"
+               toolbarPath="additions"
+               tooltip="If enabled, shows all activated bundles else shows only bundles that are only activated by default">
+         </action>
+         <action
+               class="org.eclipse.spykit.runtime.views.actions.LoadedClassesAction"
+               icon="icons/loadedClassesView.gif"
+               id="org.eclipse.spykit.runtime.views.actions.LoadedClassesAction"
+               label="Loaded Classes"
+               style="push"
+               toolbarPath="additions">
+         </action>
+      </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="org.eclipse.spykit.runtime.views.LoadedClassesView"
+               minimized="false"
+               ratio="0.5f"
+               relationship="right"
+               relative="org.eclipse.spykit.runtime.views.ActivePluginsView"
+               visible="false">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

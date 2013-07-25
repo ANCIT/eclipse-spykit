@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.spykit.runtime.feature_1.0.0.qualifier.jar" id="org.eclipse.spykit.runtime.feature" version="1.0.0.qualifier">
+      <category name="runtimespykitcat"/>
+   </feature>
+   <category-def name="runtimespykitcat" label="Eclipse Spykit - Runtime Tools">
+      <description>
+         This contains the Spykit Tool that helps in Startup Analysis. This feature is developed by ANCIT CONSULTING, India.
+      </description>
+   </category-def>
+</site>
